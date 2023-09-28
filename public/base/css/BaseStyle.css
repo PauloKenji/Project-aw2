@@ -1,0 +1,49 @@
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+
+/* Estilo para as seções de receita */
+.recipe {
+    background-color: #f4f4f4; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+}
+
+.recipe:hover {
+    transform: scale(1.02); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilo para a imagem da receita */
+.recipe img {
+    max-width: 100%; /* A imagem não deve exceder o tamanho do quadro */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Cantos arredondados para a imagem */
+}
+
+/* Estilo para o título da receita */
+.recipe h3 {
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Estilo para o link da receita */
+.recipe a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #333; /* Cor do texto do link */
+}
+
+/* Estilo para a descrição da receita */
+.recipe p {
+    font-size: 1rem; /* Tamanho da fonte para a descrição */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Estilo para o hover (passar o mouse) do link */
+.recipe a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
