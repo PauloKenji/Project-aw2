@@ -42,6 +42,20 @@ class Recipe {
             $this->addIngredient($ingredient, $id, $quantity);
         }
         $stmt->execute();
+        return $id;
+    }
+
+    public function saveImageById($id, $file_name){
+        try{
+        $sql = 'UPDATE recipes SET image_name = :image_name WHERE id = :id';
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+        $stmt->bindValue(':image_name', $file_name, SQLITE3_TEXT);
+        $stmt->execute();
+        }catch(Exception $e){
+            echo $e->getMessage();
+            exit;
+        }
     }
 
     public function getAllRecipe(){

@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS recipes (
     servingSize INT,
     user_id INTEGER,
     category_id INTEGER,
+    image_name VARCHAR(255),
     FOREIGN KEY (user_id) REFERENCES User(id),
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );

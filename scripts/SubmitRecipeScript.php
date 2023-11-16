@@ -49,11 +49,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../views/SubmitRecipeView.php");
         exit();
     }else{
+
+        $file = $_FILES['recipeImage']; // Acesse o arquivo enviado
+
         $submitRecipeController = new SubmitRecipeController($Recipe);
-        $submitRecipe = $submitRecipeController->addRecipe($recipeName, $resultArray, $instructions, $cookingTime, $servingSize, $user_id, $category);
+        $submitRecipe = $submitRecipeController->addRecipe($recipeName, $resultArray, $instructions, $cookingTime, $servingSize, $user_id, $category, $file);
     }
 
-    
     header('Location: ../scripts/GetRecipesScript.php');
 }
 

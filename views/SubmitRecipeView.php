@@ -34,7 +34,12 @@
                         unset($_SESSION['error_message']);
                     }
                 ?>
-                <form action="../scripts/SubmitRecipeScript.php" method="post" class="form-inline">
+                <form action="../scripts/SubmitRecipeScript.php" method="post" class="form-inline" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="recipeImage">Imagem da Receita:</label>
+                        <input type="file" class="form-control" id="recipeImage" name="recipeImage" accept="image/*">
+                    </div>
+                
                     <div class="form-group">
                         <label for="recipeName">Nome da Receita:</label>
                         <input type="text" class="form-control" id="recipeName" name="recipeName" required>
